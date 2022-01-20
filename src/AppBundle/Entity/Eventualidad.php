@@ -73,19 +73,19 @@ class Eventualidad
     private $updatedAt;
 
     /**
-     * @var int
+     * @var Colaborador
      *
      * @ORM\ManyToOne (targetEntity="Colaborador",inversedBy="listaEventualidad")
      */
     private $colaborador;
     /**
-     * @var int
+     * @var TipoEventualidad
      *
      * @ORM\ManyToOne (targetEntity="TipoEventualidad",inversedBy="listaEventualidad")
      */
     private $tipo;
     /**
-     * @var int
+     * @var Status
      *
      * @ORM\ManyToOne (targetEntity="Status",inversedBy="listaEventualidad")
      */
@@ -220,7 +220,7 @@ class Eventualidad
     }
 
     /**
-     * @return int
+     * @return Colaborador
      */
     public function getColaborador()
     {
@@ -228,7 +228,7 @@ class Eventualidad
     }
 
     /**
-     * @param int $colaborador
+     * @param Colaborador $colaborador
      */
     public function setColaborador($colaborador)
     {
@@ -236,7 +236,7 @@ class Eventualidad
     }
 
     /**
-     * @return int
+     * @return TipoEventualidad
      */
     public function getTipo()
     {
@@ -244,7 +244,7 @@ class Eventualidad
     }
 
     /**
-     * @param int $tipo
+     * @param TipoEventualidad $tipo
      */
     public function setTipo($tipo)
     {
@@ -252,7 +252,7 @@ class Eventualidad
     }
 
     /**
-     * @return int
+     * @return Status
      */
     public function getStatus()
     {
@@ -260,7 +260,7 @@ class Eventualidad
     }
 
     /**
-     * @param int $status
+     * @param Status $status
      */
     public function setStatus($status)
     {
